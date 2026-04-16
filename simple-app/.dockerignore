@@ -3,3 +3,5 @@ README.md
 .gitignore
 .dockerignore
 .vscode
+screenshots*
+.DS_Store
