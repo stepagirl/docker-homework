@@ -1,0 +1,7 @@
+README.md
+.git
+.gitignore
+.dockerignore
+.vscode
+screenshots*
+.DS_Store
