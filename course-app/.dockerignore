@@ -1,0 +1,11 @@
+.DS_Store
+.git
+.gitignore
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+Dockerfile
+docker-compose.yml
+README.md
