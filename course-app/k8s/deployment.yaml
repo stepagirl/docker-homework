@@ -14,9 +14,27 @@ spec:
     spec:
       containers:
         - name: course-app
-          image: nginx:1.29
+          image: kyivlink001/course-app:lesson05
           ports:
             - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            failureThreshold: 3
+          readinessProbe:
+#            httpGet:
+#              path: /healthz
+#              port: 8080 
+            exec:
+              command:
+                - cat
+                - /tmp/ready
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 2  
           env:
             - name: APP_ENV
               valueFrom:
